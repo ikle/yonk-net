@@ -28,8 +28,9 @@ int main (int argc, char *argv[])
 
 	o = nlm_start (buf, max, RTM_SETLINK, NLM_F_REQUEST, 0, 0);
 
-	nlm_add_link     (o, max, 0, 2);
-	nlm_add_link_mtu (o, max, 8008);
+	nlm_add_link       (o, max, 0, 2);
+	nlm_add_link_mtu   (o, max, 8008);
+	nlm_add_link_alias (o, max, "Test Link #2");
 
 	if (!nlm_fit (o, max)) {
 		errno = EOVERFLOW;
