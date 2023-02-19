@@ -1,13 +1,13 @@
 /*
- * Pico NetLink Message Generator
+ * Pico NetLink Message Writer
  *
  * Copyright (c) 2016-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PNL_MESSAGE_GEN_H
-#define PNL_MESSAGE_GEN_H  1
+#ifndef PNL_WRITER_H
+#define PNL_WRITER_H  1
 
 #include <string.h>
 
@@ -89,4 +89,4 @@ void nlm_close_group (struct nlm *o, uint32_t max, struct nla *group)
 		group->len = o->len - head;
 }
 
-#endif  /* PNL_MESSAGE_GEN_H */
+#endif  /* PNL_WRITER_H */

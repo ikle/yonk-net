@@ -11,7 +11,7 @@
 
 #include <linux/if_addr.h>
 
-#include <pnl/message-gen.h>
+#include <pnl/writer.h>
 
 static inline struct ifaddrmsg *
 nlm_add_addr (struct nlm *o, uint32_t max, int family, int prefix, int scope,

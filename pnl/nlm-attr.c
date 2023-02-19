@@ -8,7 +8,7 @@
 
 #include <stdint.h>
 
-#include <pnl/message-gen.h>
+#include <pnl/writer.h>
 
 void nlm_add_attr (struct nlm *o, uint32_t max, int type,
 		   const void *data, uint16_t size)

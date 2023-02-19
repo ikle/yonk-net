@@ -12,7 +12,7 @@
 #include <linux/if_link.h>
 #include <linux/rtnetlink.h>
 
-#include <pnl/message-gen.h>
+#include <pnl/writer.h>
 
 static inline struct ifinfomsg *
 nlm_add_link (struct nlm *o, uint32_t max, int type, int index)
