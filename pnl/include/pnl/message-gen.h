@@ -67,7 +67,9 @@ void nlm_add_u64 (struct nlm *o, uint32_t max, int type, uint64_t v)
 static inline
 void nlm_add_string (struct nlm *o, uint32_t max, int type, const char *s)
 {
-	nlm_add_attr (o, max, type, s, strlen (s) + 1);
+	const size_t len = (s == NULL) ? 0 : strlen (s) + 1;
+
+	nlm_add_attr (o, max, type, s, len);
 }
 
 static inline struct nla *nlm_open_group (struct nlm *o, uint32_t max, int type)

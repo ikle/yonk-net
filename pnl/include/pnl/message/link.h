@@ -73,10 +73,7 @@ static inline void nlm_add_link_qlen (struct nlm *o, uint32_t max, int qlen)
 static inline
 void nlm_add_link_alias (struct nlm *o, uint32_t max, const char *alias)
 {
-	if (alias == NULL)
-		nlm_add_flag (o, max, IFLA_IFALIAS);
-	else
-		nlm_add_string (o, max, IFLA_IFALIAS, alias);
+	nlm_add_string (o, max, IFLA_IFALIAS, alias);
 }
 
 static inline void nlm_add_link_group (struct nlm *o, uint32_t max, int group)
